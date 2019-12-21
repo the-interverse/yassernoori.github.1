@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ANY Enterprises</title>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="init-firebase.js"></script>
+    <script src="jsx.js"></script>
+    <link href="cssx.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="bg">
+</div>
+<div id="page-wrap">
+    
+    <div class="wrapper">
+        
+        <div class="container">
+            
+            <p style="font-size:40px;">Login</p>
+            
+            <div class="menu">
+                <input id="loginUser" pattern="[A-Z,a-z,0-9,.,-]*" placeholder="Username" type="text"> 
+                <input id="loginPassword" pattern="[A-Z,a-z,0-9,.,-]*" placeholder="Password" type="password"> 
+                <button id="login" style="width: 138px;">Log In</button> 
+                <button id="signup" style="width: 138px;">Sign Up</button> 
+                <p><span class="errorMessage"></span></p>   
+            </div>
+            
+        </div>
+        
+        
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+   
+    
+    <div class="">
+        
+        <header>
+            
+            <div>
+                <span id="headerTitle">Login/Sign-Up</span>
+                
+                 <span id="navUsername" style="float: right; margin-right: 20px;"></span> <!-- Navigation. We hide it in small screens. -->
+                
+                <nav>
+                    <br /><br /><br />
+                    
+
+                    <iframe style="display:none" id="imgSection" src="https://anyenterprises.github.io/images/test.html" style="height: 350px;" width="100%"></iframe>
+                    
+                </nav>
+                
+            </div>
+            
+        </header>
+        
+        
+        <main style="display: flex; align-items: center; flex-direction: column;">
+            
+            <div class="page-content" style="margin-top: 50px;">
+                <!-- content goes here -->
+            </div>
+            
+            
+            <div id="chatDiv">
+                
+                <dialog style="position: fixed; left: 0; bottom: 0; width: 100%; text-align: center">
+                    <form method="post" onsubmit="submitMessage()">
+                        <div>
+                             <input placeholder="Message" class="inputx" style="float:left; display:inline; width: 80%;" id="message" min="3" name="message" title="3 - 100 characters required."> 
+                             <button style="float:left; display:inline; width: 15%;" id="submit" type="submit" class="buttonx">Send</button>
+                        </div>
+                    </form>
+                </dialog>
+                
+                <div id="list"></div>
+                <button class="buttonx" id="showMore" onclick="showMoreResults()" style="display: none;">Expand Messages</button>
+                
+            </div>
+            
+            
+        </main>
+        
+    </div>
+    
+</div>
+    
+</body>
+</html>
